@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
             double num2 = Double.parseDouble(tempVal.getText().toString());
             double porcentaje = 100;
             double respuesta = 0;
-            int factorial= 1;
+
             //Este es para el radiogroup y los radiobuttons
             switch (optOperaciones.getCheckedRadioButtonId()) {
                 case R.id.optSuma:
@@ -53,9 +53,15 @@ public class MainActivity extends Activity {
                     break;
                 case R.id.optExponencia:
                     respuesta = (Math.pow(num1,num2));
-              // case R.id.optFactoreo:
-                   // long factorial= 1;
-                   // respuesta = num1 + num2 * factorial;
+               case R.id.optFactoreo:
+                   double factor = 1;
+                   while ( num1!=0 ) {
+                       factor = factor * num1;
+                       num1 --;
+                       System.out.println(factor);
+                       respuesta = num1;
+                       break;
+                   }
             }
 
           //  long factorial= 1;
@@ -79,8 +85,15 @@ public class MainActivity extends Activity {
                     respuesta= num1*num2/porcentaje;
                 case 7: //Exponencia.
                     respuesta = (Math.pow(num1,num2));
-                 //case 8: //Factoreo.
-                    // respuesta = num1 + num2 ;
+                 case 8: //Factoreo.
+                     double factorial = 1;
+                     while (num1 != 0) {
+                         factorial = factorial * num1;
+                         num1--;
+                         System.out.println(factorial);
+                         respuesta = num1;
+                         break;
+                     }
 
             }
 
