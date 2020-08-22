@@ -1,4 +1,4 @@
-package com.example.prueba;
+package com.example.pruebapararama;
 
 import org.junit.Test;
 
